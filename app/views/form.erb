@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-md-4">
+        <h2>About the Developer</h2>
+        <p>Michelle McManus is an accomplished professional with more than 16 years experience in strategic planning, project management, business analysis, and marketing programs.  Specific expertise in website management, large scale social enablement programs, training, and marketing automation.</p>
+        <ul>
+            <li>Strong proficiency to analyze data and create meaningful recommendations to improve performance.</li>
+            <li>Ten years experience with marketing automation platforms including Marketo, Eloqua and ExactTarget.</li>
+            <li>Five years experience in B2C marketing, training, and agent development.</li>
+            </ul>
+        <p>Learn more <a href="http://michelleisclever.github.io">on Github</a>.</p>
+    </div>
+    <% if !@error.nil? %>
+    <div class="col-md-3">
+    <div class="alert alert-warning">
+    <p><%= @error %></p>
+    </div>
+    </div>
+    <% end %>
+    <form class="col-md-3" action="/" method="post">
+    <div class="form-group">
+        <label for="my_birthdate">
+            Birthdate:</label>
+    <input class="form-control" type="text" id="my_birthdate" name="my_birthdate" /> 
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+</div>

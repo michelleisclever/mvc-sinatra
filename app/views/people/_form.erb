@@ -1,0 +1,22 @@
+<form class="<%= people_form_class(@person) %>" id="<%= people_form_id(@person) %>" action="<%= people_form_action(@person) %>">
+    <input type="hidden" name="_method" value="<%= people_form_method(@person) %>" />
+    <div class="form-group">
+        <div class="form-group">               
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name" class="form-control" value="<%= @person.first_name %>"/>
+      </div>
+        
+      <div class="form-group">
+        <label for="last_name">Last Name:</label>
+          <input type="text" name="last_name" class="form-control" value="<%= @person.last_name %>" />
+      </div>
+        
+      <div class="form-group">
+        <label for="birthdate">
+            Birthdate:</label>    
+          <input name="birthdate" type="date" class="form-control" value="<%= @person.birthdate %>" /> 
+      </div>
+    
+    <button type="submit" class="btn btn-default">Submit</button>
+    </div>
+</form>
