@@ -1,5 +1,7 @@
 class Person < ActiveRecord::Base
     
+validates_presence_of :birthdate, :first_name, :last_name
+    
     def self.get_number(my_birthdate)
 numbers = my_birthdate[0].to_i + my_birthdate[1].to_i + my_birthdate[2].to_i + my_birthdate[3].to_i + my_birthdate[4].to_i + my_birthdate[5].to_i + my_birthdate[6].to_i + my_birthdate[7].to_i + my_birthdate[8].to_i + my_birthdate[9].to_i
 #puts "My number is #{numbers}"

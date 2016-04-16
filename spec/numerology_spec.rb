@@ -33,7 +33,7 @@ describe 'Our Numerology App' do
 
   it "has a form" do
     get '/'
-    expect(last_response.body).to include("form")
+    expect(last_response.body).to include("<form ")
   end
 
   it "responds with success when we pass a birthday" do
