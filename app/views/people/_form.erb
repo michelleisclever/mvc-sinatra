@@ -1,4 +1,4 @@
-<form class="<%= people_form_class(@person) %>" id="<%= people_form_id(@person) %>" action="<%= people_form_action(@person) %>">
+<form class="<%= people_form_class(@person) %>" id="<%= people_form_id(@person) %>" action="<%= people_form_action(@person) %>" method="post">
     <input type="hidden" name="_method" value="<%= people_form_method(@person) %>" />
     <div class="form-group">
         <div class="form-group">               
@@ -17,6 +17,8 @@
           <input name="birthdate" type="date" class="form-control" value="<%= @person.birthdate %>" /> 
       </div>
     
+        <div>
     <button type="submit" class="btn btn-default">Submit</button>
+    </div>
     </div>
 </form>
