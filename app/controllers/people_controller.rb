@@ -39,8 +39,8 @@ put '/people/:id' do
     @person.last_name = params[:last_name]
     @person.birthdate = params[:birthdate]
     if @person.valid?
-    @person.save
-    redirect "/people/#{@person.id}"
+        @person.save
+        redirect "/people/#{@person.id}"
     else
         @person.errors.full_messages.each do |msg|
             @errors = "#{@errors} #{msg}."
@@ -50,12 +50,9 @@ put '/people/:id' do
 end
 
 get '/people/:id' do
-    @person = Person.find(params[:id])
-    birthdate_string = @person.birthdate.strftime("%m%d%Y")
-    
-    number = Person.get_number(birthdate_string)
+    @person = Person.find(params[:id])    
+    number = Person.get_number(@person.birthdate.strftime("%m%d%Y"))
     @message = Person.message_to(number)
-    
     erb :"/people/show"
 end
 
