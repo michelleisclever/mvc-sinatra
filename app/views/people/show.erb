@@ -1,5 +1,7 @@
-<h1>All About You</h1>
+<h2>All About <%= "#{@person.first_name}" %></h2>
 <p>
 <%= "#{@person.first_name} #{@person.last_name} - #{@person.birthdate}" %>
 </p>
 <p><%= "Your number is #{@message}" %></p>
+<h3>Want to know your number?</h3>
+<p class="btn btn-default"><a href="/">Tell Me More</a></p>
